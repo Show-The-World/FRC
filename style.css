@@ -37,8 +37,8 @@
 :root{
     --headerHeight: calc((60 /16 * 1rem) + ((125 - 60) * ((100vw - 320px) / (1920 - 320))));
     --gutterSpacing: calc((20 /16 * 1rem) + ((245 - 20) * ((100vw - 320px) / (1920 - 320))));
-    --sectionSpacing: calc((100 /16 * 1rem) + ((300 - 100) * ((100vw - 320px) / (1920 - 320))));
-    --lineSpacing: calc((50 /16 * 1rem) + ((30 - 50) * ((100vw - 320px) / (1920 - 320))));
+    --sectionSpacing: calc((220 /16 * 1rem) + ((300 - 220) * ((100vw - 320px) / (1920 - 320))));
+    --lineSpacing: calc((25 /16 * 1rem) + ((30 - 25) * ((100vw - 320px) / (1920 - 320))));
 }
 
 
@@ -50,17 +50,7 @@ body{
     background-color: var(--color-background);
 }
 
-header{
-    height: var(--headerHeight);
-    border: 1px solid black;
-    
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 999;
-    background-color: var(--color-header);
-}
+
 
 section{
     padding: calc(var(--sectionSpacing) / 2) var(--gutterSpacing);
@@ -72,11 +62,11 @@ button, a{
 }
 
 .imgWrapper{
-    z-index: 5;
+    z-index: 10;
 }
 img{
-    background-color: grey;
-    z-index: 5;
+    z-index: 10;
+    display: block;
 }
 
 *{
@@ -96,7 +86,7 @@ h2, h2 *{
     color: var(--color-dark1);
     font-family: sans-serif;
     font-weight: 900;
-    font-size: calc((32 /16 * 1rem) + ((46 - 32) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((28 /16 * 1rem) + ((46 - 28) * ((100vw - 320px) / (1920 - 320))));
 }
 
 h3, h3 *{
@@ -107,12 +97,12 @@ h3, h3 *{
 
 p, .p, p *, .p *{
     color: var(--color-dark1);
-    font-size: calc((18 /16 * 1rem) + ((24 - 18) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((16 /16 * 1rem) + ((24 - 16) * ((100vw - 320px) / (1920 - 320))));
 }
 
 .--typo-pHero, .--typo-pHero *{
     color: var(--color-dark1);
-    font-size: calc((24 /16 * 1rem) + ((32 - 24) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((22 /16 * 1rem) + ((32 - 22) * ((100vw - 320px) / (1920 - 320))));
 }
 
 .--typo-pBig, .--typo-pBig *{
@@ -123,12 +113,12 @@ p, .p, p *, .p *{
 
 .--typo-btn1, .--typo-btn1 *{
     color: var(--color-dark1);
-    font-size: calc((24 /16 * 1rem) + ((32 - 24) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((18 /16 * 1rem) + ((32 - 18) * ((100vw - 320px) / (1920 - 320))));
 }
 
 .--typo-btn2, .--typo-btn2 *{
     color: var(--color-dark1);
-    font-size: calc((24 /16 * 1rem) + ((26 - 24) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((16 /16 * 1rem) + ((26 - 16) * ((100vw - 320px) / (1920 - 320))));
     font-weight: 600;
 }
 
@@ -165,6 +155,15 @@ p, .p, p *, .p *{
     background-size: 66px 66px;
     background-position: 0 0,33px 33px;
 }
+@media screen and (max-width:600px){
+    .--flare-background-1::before{
+        bottom: unset;
+        right: 0;
+        width: auto;
+        height: 30%;
+    }
+}
+
 
 
 .--flare-background-2{
@@ -189,6 +188,17 @@ p, .p, p *, .p *{
     background-size: 35px 35px;
 }
 
+@media screen and (max-width:600px){
+    .--flare-background-3::before{
+        right: 0;
+        left: 0;
+        top: auto;
+        width: auto;
+        bottom: 0;
+        height: 30%;
+    }
+}
+
 
 .--flare-background-4{
     background-color: var(--color-background);
@@ -196,6 +206,8 @@ p, .p, p *, .p *{
     background-size: 15px 15px;
     background-image: repeating-linear-gradient(45deg, #D9D9D9 0, #D9D9D9 1.5px, var(--color-background) 0, var(--color-background) 50%);
 }
+
+
 
 
 
@@ -211,35 +223,33 @@ p, .p, p *, .p *{
 .--btn-learnMore1{
     position: relative;
     --lineThickness: 0.2em;
-    --sideGap: 0.3em;
-    width: fit-content;
+    --sideOffset: 2em;
+    width: max-content;
+
+    padding-right: var(--sideOffset);
 }
 
 .--btn-learnMore1 .arrowLine{
     background-color: var(--color-green1);
     height: var(--lineThickness);
-    width: calc(100% + var(--sideGap));
+    width: calc(100% + var(--sideOffset));
+    margin-top: 0.2em;
+    clip-path: polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);
 }
-
-
 .--btn-learnMore1 .arrowHead{
-
-    --arrowWidth: 1em;
-    width: var(--arrowWidth);
-    height: 0.7em;
+    width: calc(var(--lineThickness) * 1.9);
+    background-color: var(--color-green1);
     position: absolute;
-    right: calc(-1 * var(--sideGap) - var(--arrowWidth));
+    right: 0;
+    top: 0.8em;
     bottom: 0;
-
-    border-bottom: calc(var(--lineThickness) * 1.1) solid var(--color-green1);
-    border-right: calc(var(--lineThickness) * 1.1) solid var(--color-green1);
-    -moz-transform: skew(40deg) translate(-10px);
-    -webkit-transform: skew(40deg) translate(-10px);
-    transform: skew(40deg translate(-10px)) 
+    transform: skewX(60deg);
+    transform-origin: bottom;
 }
+
 
 
 .--btn-CTA2{
     background-color: var(--color-orange1);
-    padding: 0.5em 2.5em;
+    padding: 0.5em 1.2em;
 }
