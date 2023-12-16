@@ -10,15 +10,20 @@
 </head>
 <body>
     <header>
-        <a href="" class="logoWrapper"><img src="assets/FRC_Logo_Minimal.svg" alt=""></a>
-        <ul>
-            <li><a href="" class="--btn-nav p --flare-text-1">Home</a></li>
-            <li><a href="" class="--btn-nav p">About Us</a></li>
-            <li><a href="" class="--btn-nav p">Our Services</a></li>
-            <li><a href="" class="--btn-nav p">Our Gallery</a></li>
-            <li><a href="" class="--btn-nav p">Contact Us</a></li>
-            <li><a href="" class="--btn-CTA2 p">Free Quote</a></li>
-        </ul>
+        <a href="/" class="logoWrapper"><img src="/assets/FRC_Logo_Minimal.svg" alt=""></a>
+        <input  type="checkbox" id="nav-toggle" name="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="/" class="--btn-nav --typo-pSmall --flare-text-1">Home</a></li>
+                <li><a href="/about_our_home_improvement" class="--btn-nav --typo-pSmall">About Us</a></li>
+                <li><a href="/general_contracting_services" class="--btn-nav --typo-pSmall">Our Services</a></li>
+                <li><a href="/contact" class="--btn-nav --typo-pSmall">Contact Us</a></li>
+                <li><a href="/contact#quote" class="--btn-CTA2 --typo-pSmall">Free Quote</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
     </header>
     
     <section class="hero">
@@ -46,7 +51,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
                     <a href="" class="p --btn-learnMore1">More About Service Category<div class="arrowLine"></div><div class="arrowHead"></div></a>
                 </div>
-                <img src="" alt="">
+                <img src="/assets/thing_icon.svg" alt="">
             </div>
 
             <div class="--card-1">
@@ -55,10 +60,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
                     <a href="" class="p --btn-learnMore1">More About Service Category<div class="arrowLine"></div><div class="arrowHead"></div></a>
                 </div>
-                <div class="imgWrapper">
-                    <img src="" alt="">
-                </div>
-
+                <img src="/assets/thing_icon.svg" alt="">
             </div>
 
             <div class="--card-1">
@@ -67,10 +69,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
                     <a href="" class="p --btn-learnMore1">More About Service Category<div class="arrowLine"></div><div class="arrowHead"></div></a>
                 </div>
-                <div class="imgWrapper">
-                    <img src="" alt="">
-                </div>
-
+                <img src="/assets/thing_icon.svg" alt="">
             </div>
 
             <div class="--card-1">
@@ -79,10 +78,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
                     <a href="" class="p --btn-learnMore1">More About Service Category<div class="arrowLine"></div><div class="arrowHead"></div></a>
                 </div>
-                <div class="imgWrapper">
-                    <img src="" alt="">
-                </div>
-
+                <img src="/assets/thing_icon.svg" alt="">
             </div>
         </div>
     </section>
@@ -125,7 +121,7 @@
             <img class="img5" src="" alt="">
         </div>
 
-        <a class="--btn-CTA1 --typo-btn1" href="">Home Improvement Photos</a>
+        <!-- <a class="--btn-CTA1 --typo-btn1" href="">Home Improvement Photos</a> -->
     </section>
 
 
@@ -153,7 +149,7 @@
                     <h3>M.Trembleau<br>Ottawa, ON</h3>
                     <img src="/assets/Profile_Icon_Male.svg" alt="">
                 </div>
-                <div class="sepperator"><img src="/assets/Quote_Symbol.svg" alt=""></div>
+                <div class="separator"><img src="/assets/Quote_Symbol.svg" alt=""></div>
                 <p class="--typo-pSmall">Fast response time with this company. Neil, the owner, is extremely knowledgeable. My foundation of my deck was falling apart. He came and gave me options to either tear it all down, or remodel. They are very professional and do amazing work! Highly recommend!</p>
             </div>
             <div class="--card-2">
@@ -161,7 +157,7 @@
                     <h3>M.Trembleau<br>Ottawa, ON</h3>
                     <img src="/assets/Profile_Icon_Male.svg" alt="">
                 </div>
-                <div class="sepperator"><img src="/assets/Quote_Symbol.svg" alt=""></div>
+                <div class="separator"><img src="/assets/Quote_Symbol.svg" alt=""></div>
                 <p class="--typo-pSmall">Fast response time with this company. Neil, the owner, is extremely knowledgeable. My foundation of my deck was falling apart. He came and gave me options to either tear it all down, or remodel. They are very professional and do amazing work! Highly recommend!</p>
             </div>
             <div class="--card-2">
@@ -169,14 +165,12 @@
                     <h3>M.Trembleau<br>Ottawa, ON</h3>
                     <img src="/assets/Profile_Icon_Male.svg" alt="">
                 </div>
-                <div class="sepperator"><img src="/assets/Quote_Symbol.svg" alt=""></div>
+                <div class="separator"><img src="/assets/Quote_Symbol.svg" alt=""></div>
                 <p class="--typo-pSmall">Fast response time with this company. Neil, the owner, is extremely knowledge it all down, or remodel. They are very professional and do amazing work! Highly recommend!</p>
             </div>
         </div>
 
     </section>
-
-
 
 
     
@@ -185,5 +179,41 @@
         <p class="--typo-pHero">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
         <a href="" class="--btn-CTA2 --typo-btn2">Home Improvement Quote</a>
     </section>
+
+    
+
+    <!-- <footer class="--flare-background-2">
+        <div class="footer-container">
+            <div class="footer-headingContainer">
+                <p>Discover beautifully crafted doors tailored for every home at Rhino Clad. Our windows promise unmatched reliability and performance, all at unbeatable prices. Crafting Ambiance, One Door & Window at a Time.</p>
+                <img class="footer-logo" src="/assets/FRC_Logo_Minimal.svg" alt="">
+            </div>
+            <div class="footer-linkContainer">
+                <nav class="footer-card">
+                    <h3 class="flare4">Navigation</h3>
+                    <a class="flarePage" href="/">Home</a>
+                    <a href="/about">About Us</a>
+                    <a href="/windows">Our Windows</a>
+                    <a href="/contact">Contact Us</a>
+                </nav>
+                <nav class="footer-card">
+                    <h3 class="flare4">Services</h3>
+                    <a href="/windows">Windows</a>
+                    <a href="/doors">Doors</a>
+                    <a href="/entry_doors">Entry Doors</a>
+                    <a href="/patio_doors">Patio Doors</a>
+                </nav>
+
+                <nav class="footer-card">
+                    <h3 class="flare4">Contact</h3>
+                    <a href="/contact">Get a Quote</a>
+                    <a href="/contact">Visit Us</a>
+                    <a href="/contact">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-band"><span class="--typo-footerBand">Copyright 2024 <a href="https://showtheworld.digital">Show The World</a>. All rights reserved.</span></div>
+    </footer> -->
+
 </body>
 </html>

@@ -24,7 +24,8 @@
     --color-header: #EFEFEF;
     --color-light1: white;
     --color-light2: #E8E8E8;
-    --color-dark1: #190D0D;
+    --color-dark1: #131313;
+    --color-dark4: #1e1e1e;
     --color-dark2: #313131;
     --color-dark3: #3D413C;
     --color-green1: #77D875;
@@ -35,7 +36,7 @@
 /* SIZE VARS */
 
 :root{
-    --headerHeight: calc((60 /16 * 1rem) + ((125 - 60) * ((100vw - 320px) / (1920 - 320))));
+    --headerHeight: calc((50 /16 * 1rem) + ((90 - 50) * ((100vw - 320px) / (1920 - 320))));
     --gutterSpacing: calc((20 /16 * 1rem) + ((245 - 20) * ((100vw - 320px) / (1920 - 320))));
     --sectionSpacing: calc((220 /16 * 1rem) + ((300 - 220) * ((100vw - 320px) / (1920 - 320))));
     --lineSpacing: calc((25 /16 * 1rem) + ((30 - 25) * ((100vw - 320px) / (1920 - 320))));
@@ -86,7 +87,7 @@ h2, h2 *{
     color: var(--color-dark1);
     font-family: sans-serif;
     font-weight: 900;
-    font-size: calc((28 /16 * 1rem) + ((46 - 28) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((28 /16 * 1rem) + ((56 - 28) * ((100vw - 320px) / (1920 - 320))));
 }
 
 h3, h3 *{
@@ -123,13 +124,48 @@ p, .p, p *, .p *{
 }
 
 .--typo-h2CTA, .--typo-h2CTA *{
+    color: var(--color-dark1);
     font-size: calc((32 /16 * 1rem) + ((64 - 32) * ((100vw - 320px) / (1920 - 320))));
 }
 
 .--typo-pSmall{
+    color: var(--color-dark1);
     font-size: calc((18 /16 * 1rem) + ((21 - 18) * ((100vw - 320px) / (1920 - 320))));
 }
 
+.--typo-cell{
+    color: var(--color-dark1);
+    font-weight: 600;
+    font-size: calc((20 /16 * 1rem) + ((28 - 20) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--typo-cell2, .--typo-cell2 *{
+    color: var(--color-dark1);
+    font-weight: 100;
+    font-size: calc((18 /16 * 1rem) + ((22 - 18) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--typo-formH2Big{
+    color: var(--color-dark1);
+    font-size: calc((30 /16 * 1rem) + ((48 - 30) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 100;
+}
+
+.--typo-formH2Small{
+    color: var(--color-dark1);
+    font-size: calc((26 /16 * 1rem) + ((34 - 26) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 600;
+}
+
+.--typo-inputLabel{
+    color: var(--color-dark1);
+    font-size: calc((16 /16 * 1rem) + ((18 - 16) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 600;
+}
+
+.--typo-inputText{
+    font-size: calc((20 /16 * 1rem) + ((22 - 20) * ((100vw - 320px) / (1920 - 320))));
+}
 
 
 /* FLARE */
@@ -207,6 +243,12 @@ p, .p, p *, .p *{
     background-image: repeating-linear-gradient(45deg, #D9D9D9 0, #D9D9D9 1.5px, var(--color-background) 0, var(--color-background) 50%);
 }
 
+.--flare-background-6{
+    background-color: var(--color-dark4);
+    --color-dark1: var(--color-background);
+}
+
+
 
 
 
@@ -218,6 +260,14 @@ p, .p, p *, .p *{
     border: 0.075em solid var(--color-dark1);
 }
 
+
+.--btn-submit{
+    padding: 0.50em 0.75em;
+    border: 0.075em solid var(--color-green1);
+    color: var(--color-green1);
+    width: 100%;
+    text-align: left;
+}
 
 
 .--btn-learnMore1{
