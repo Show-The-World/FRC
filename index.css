@@ -521,6 +521,10 @@ header .logoWrapper img{
 
 
 
+.--layout-other{
+    padding: 0;
+}
+
 
 
 .--card-1{
@@ -604,6 +608,11 @@ header .logoWrapper img{
 }
 
 
+.--card-3{
+    text-align: center;
+}
+
+
 
 .--band-1{
     padding: 0;
@@ -665,6 +674,30 @@ header .logoWrapper img{
     }
 }
 
+
+.--band-2{
+    background-color: var(--color-dark3);
+    display: grid;
+    grid-auto-flow: column;
+    padding: calc(var(--lineSpacing) * 0.5) var(--gutterSpacing);
+    justify-content: end;
+    gap: calc(var(--gutterSpacing) * 0.4);
+
+    clip-path: polygon(0 80%, 30% 0,100% 0,100% 100%,0 100%);
+    margin-bottom: -4px;
+
+    z-index: 20;
+    position: relative;
+}
+
+@media screen and (max-width:650px){
+    .--band-2{
+        gap: 0;
+        clip-path: none;
+
+        justify-content: space-between;
+    }
+}
 
 
 
