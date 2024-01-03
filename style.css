@@ -51,8 +51,6 @@ body{
     background-color: var(--color-background);
 }
 
-
-
 section{
     padding: calc(var(--sectionSpacing) / 2) var(--gutterSpacing);
 }
