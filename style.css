@@ -29,7 +29,8 @@
     --color-dark2: #313131;
     --color-dark3: #535353;
     --color-green1: #77D875;
-    --color-orange1:#FF891F;
+    --color-orange1:#ff9650;
+    --color-orange2:#FBB06C;
 }
 
 
@@ -114,7 +115,7 @@ p, .p, p *, .p *{
 
 .--typo-btn1, .--typo-btn1 *{
     color: var(--color-dark1);
-    font-size: calc((18 /16 * 1rem) + ((32 - 18) * ((100vw - 320px) / (1920 - 320))));
+    font-size: calc((18 /16 * 1rem) + ((28 - 18) * ((100vw - 320px) / (1920 - 320))));
 }
 
 .--typo-btn2, .--typo-btn2 *{
@@ -195,12 +196,13 @@ p, .p, p *, .p *{
     top: calc(var(--sectionSpacing) /4);
     bottom:  calc(var(--sectionSpacing) /4);
     width: 30%;
-
     content: '';
-    opacity: 1;
-    background-image:  radial-gradient(#7d7e86 1.65px, transparent 1.65px), radial-gradient(#7d7e86 1.65px, var(--color-dark3) 1.65px);
-    background-size: 66px 66px;
-    background-position: 0 0,33px 33px;
+    background-color: var(--color-dark2);
+
+    /* opacity: 1; */
+    /* background-image:  radial-gradient(#7d7e86 1.65px, transparent 1.65px), radial-gradient(#7d7e86 1.65px, var(--color-dark3) 1.65px); */
+    /* background-size: 66px 66px; */
+    /* background-position: 0 0,33px 33px; */
 }
 @media screen and (max-width:600px){
     .--flare-background-1::before{
@@ -219,7 +221,7 @@ p, .p, p *, .p *{
 }
 
 
-.--flare-background-3{position: relative;}
+/* .--flare-background-3{position: relative;}
 .--flare-background-3::before{
     position: absolute;
     z-index: 1;
@@ -227,13 +229,13 @@ p, .p, p *, .p *{
     top: 0;
     bottom: 0;
     width: 30%;
-
     content: '';
-    background-color: var(--color-green1);
+    background-color: var(--color-orange1);
+
     opacity: 1;
     background-image: radial-gradient(rgb(27, 21, 21) 1.75px, var(--color-green1) 1.75px);
     background-size: 35px 35px;
-}
+} */
 
 @media screen and (max-width:600px){
     .--flare-background-3::before{
@@ -249,9 +251,9 @@ p, .p, p *, .p *{
 
 .--flare-background-4{
     background-color: var(--color-background);
-    opacity: 1;
     background-size: 15px 15px;
-    background-image: repeating-linear-gradient(45deg, #D9D9D9 0, #D9D9D9 1.5px, var(--color-background) 0, var(--color-background) 50%);
+    background-image: repeating-linear-gradient(45deg, #e7e1e1 0, #e7e1e1 1.5px, var(--color-background) 0, var(--color-background) 50%);
+
 }
 
 .--flare-background-6{
@@ -260,14 +262,16 @@ p, .p, p *, .p *{
 }
 
 
-
+.--flare-background-7{
+    position: relative;
+}
 .--flare-background-7::before{
     content: "";
 
     position: absolute;
-    bottom: calc(var(--sectionSpacing) /2);
+    bottom: 0;
     right: 0;
-    top: var(--headerHeight);
+    top: 0;
     width: 40%;
 
     background-color: #454944;
@@ -275,7 +279,11 @@ p, .p, p *, .p *{
     background-size: 55px 55px;
     background-image: repeating-linear-gradient(45deg, #656565 0, #656565 4px, #454944 0, #454944 50%);
 }
-
+@media screen and (max-width:950px){
+    .--flare-background-7::before{
+        display: none;
+    }
+}
 
 
 
@@ -328,5 +336,5 @@ p, .p, p *, .p *{
 
 .--btn-CTA2{
     background-color: var(--color-orange1);
-    padding: 0.5em 1.2em;
+    padding: 0.6em 1.2em;
 }

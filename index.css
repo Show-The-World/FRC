@@ -86,13 +86,24 @@ header .logoWrapper img{
     }
 
     header .nav-toggle-label{
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
 
-        height: 10px;
-        width: 10px;
-        background-color: black;
+        --barThickness: calc(var(--headerHeight) * 0.1);
+
+        width: calc(var(--barThickness) * 7);
+        height: calc(var(--barThickness) * 5);
         align-self: center;
     }
+
+    header .nav-toggle-label span{
+        background-color: var(--color-dark1);
+
+        width: 100%;
+        height: var(--barThickness);
+    }
+
 
     header .nav-toggle:checked ~ nav{
         transform: scale(1,1);
@@ -111,7 +122,7 @@ header .logoWrapper img{
 }
 .subHero .container{
     padding: calc(var(--lineSpacing) * 4) var(--gutterSpacing);
-    border-right: solid 10px var(--color-green1);
+    border-right: solid 10px var(--color-orange1);
     width: fit-content;
 }
 .subHero > .container * {
@@ -164,15 +175,68 @@ header .logoWrapper img{
 .hero .container > *:not(:last-child){
     margin-bottom: var(--lineSpacing);
 }
+.hero .imgWrapper{
+    position: relative;
+    height: max-content;
+}
 .hero .imgWrapper img{
     width: 100%;
     aspect-ratio: 1.2;
+    height: 100%;
+    object-fit: cover;
 }
-@media screen and (max-width:950px){
+
+.hero .infoCard{
+    position: absolute;
+    background-color: var(--color-dark2);
+
+    right: -15%;
+    bottom: -5%;
+    
+    padding: var(--lineSpacing);
+
+
+    display: grid;
+    gap: calc(var(--lineSpacing)* 1.8);
+
+}
+
+.hero .infoCard .separator{
+    width: 100%;
+    background-color: var(--color-light2);
+    height: 2px;
+}
+
+@media screen and (max-width:1350px){
+    .hero .imgWrapper{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:900px){
     .hero{
         grid-template-columns: 1fr;
     }
+    
+
+    .hero .infoCard{
+        display: flex;
+        right:  -20px;
+        left: -20px;
+        top: -15px;
+        bottom: unset;
+
+        padding: calc(var(--lineSpacing)*0.7);
+
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .hero .infoCard .separator{
+        display: none;
+    }
 }
+
 
 
 
