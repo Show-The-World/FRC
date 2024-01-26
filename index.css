@@ -290,9 +290,8 @@ header .logoWrapper img{
 }
 
 .contactForm .contactInfo .contactCard img{
-    width: 60px;
+    width: 40px;
     aspect-ratio: 1;
-    background-color: grey;
     margin-right: var(--lineSpacing);
 }
 
@@ -587,6 +586,10 @@ header .logoWrapper img{
 
 .--layout-centerP{
     text-align: center;
+    font-weight: 900;
+}
+.--layout-centerP p{
+    font-weight: 900;
 }
 .--layout-centerP > *{
     margin: auto;
@@ -600,6 +603,26 @@ header .logoWrapper img{
     gap: var(--lineSpacing);
 }
 
+@media screen and (max-width:575px){
+    .--layout-doubleP{
+        grid-template-columns: 1fr;
+    }
+}
+
+.--layout-tripleP{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--lineSpacing);
+}
+.--layout-tripleP .--layout-informational li{
+    list-style-position: inside;
+}
+
+@media screen and (max-width:1300px){
+    .--layout-tripleP{
+        grid-template-columns: 1fr;
+    }
+}
 
 
 .--layout-other{
@@ -612,13 +635,18 @@ header .logoWrapper img{
     grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (max-width:800px){
+    .--layout-sideInformational{
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .--layout-informational *{
     margin-bottom: 0.5em;
 }
 .--layout-informational li{
     list-style: disc;
-    list-style-position: inside;
 }
 .--layout-informational h2{
     margin-top: 1.2em;
@@ -739,7 +767,6 @@ header .logoWrapper img{
 .--band-1 .imgWrapper{ 
     padding: var(--lineSpacing) var(--gutterSpacing);
     padding-left: calc(var(--gutterSpacing)* 0.4);
-    background-color: grey;
 
     display: flex;
     align-items: center;
