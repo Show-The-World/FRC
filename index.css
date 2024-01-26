@@ -585,12 +585,42 @@ header .logoWrapper img{
 
 
 
+.--layout-centerP{
+    text-align: center;
+}
+.--layout-centerP > *{
+    margin: auto;
+    width: calc((280 /16 * 1rem) + ((1200 - 280) * ((100vw - 320px) / (1920 - 320))));
+}
+
+
+
 .--layout-other{
     padding: 0;
 }
 
 
+.--layout-sideInformational{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
+
+.--layout-informational *{
+    margin-bottom: 0.5em;
+}
+.--layout-informational li{
+    list-style: disc;
+    list-style-position: inside;
+}
+.--layout-informational h2{
+    margin-top: 1.2em;
+}
+
+
+.--btn-card1{
+    width:auto ;
+}
 .--card-1{
     display: flex;
     background-color: var(--color-light1);
@@ -598,6 +628,9 @@ header .logoWrapper img{
 
     border-bottom: solid 7px var(--color-orange1);
     position: relative;
+
+    height: 100%;
+
 }
 
 .--card-1 .container> *:not(:last-child){
@@ -608,10 +641,7 @@ header .logoWrapper img{
     margin-top: auto;
 }
 .--card-1 .container{
-    width: min-content;
-}
-.--card-1 a{
-    width: max-content;
+    width: 80%;
 }
 
 .--card-1 img{

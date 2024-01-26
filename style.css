@@ -39,7 +39,7 @@
 :root{
     --headerHeight: calc((50 /16 * 1rem) + ((90 - 50) * ((100vw - 320px) / (1920 - 320))));
     --gutterSpacing: calc((20 /16 * 1rem) + ((245 - 20) * ((100vw - 320px) / (1920 - 320))));
-    --sectionSpacing: calc((220 /16 * 1rem) + ((300 - 220) * ((100vw - 320px) / (1920 - 320))));
+    --sectionSpacing: calc((190 /16 * 1rem) + ((300 - 190) * ((100vw - 320px) / (1920 - 320))));
     --lineSpacing: calc((25 /16 * 1rem) + ((30 - 25) * ((100vw - 320px) / (1920 - 320))));
 }
 
@@ -97,7 +97,7 @@ h3, h3 *{
     font-weight: 900;
 }
 
-p, .p, p *, .p *{
+p, .p, p *, .p *, li{
     color: var(--color-dark1);
     font-size: calc((16 /16 * 1rem) + ((24 - 16) * ((100vw - 320px) / (1920 - 320))));
 }
@@ -275,9 +275,6 @@ p, .p, p *, .p *{
     width: 40%;
 
     background-color: #454944;
-    opacity: 1;
-    background-size: 55px 55px;
-    background-image: repeating-linear-gradient(45deg, #656565 0, #656565 4px, #454944 0, #454944 50%);
 }
 @media screen and (max-width:950px){
     .--flare-background-7::before{
@@ -285,6 +282,10 @@ p, .p, p *, .p *{
     }
 }
 
+
+.--flare-background-8{
+    background-color: rgb(244, 244, 244);
+}
 
 
 
