@@ -594,6 +594,13 @@ header .logoWrapper img{
 }
 
 
+.--layout-doubleP{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--lineSpacing);
+}
+
+
 
 .--layout-other{
     padding: 0;
@@ -615,6 +622,10 @@ header .logoWrapper img{
 }
 .--layout-informational h2{
     margin-top: 1.2em;
+    color: var(--color-dark1);
+    font-size: calc((26 /16 * 1rem) + ((34 - 26) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 600;
+
 }
 
 
