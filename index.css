@@ -633,6 +633,8 @@ header .logoWrapper img{
 .--layout-sideInformational{
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    gap: calc(var(--lineSpacing) * 2);
 }
 
 @media screen and (max-width:800px){
@@ -640,6 +642,18 @@ header .logoWrapper img{
         grid-template-columns: 1fr;
     }
 }
+.--layout-sideInformational img {
+    width: 100%;
+}
+
+.--layout-sideInformational img:not(:last-child){
+    margin-bottom: var(--lineSpacing);
+}
+
+.--layout-sideInformational .imgWrapper{
+    width: auto;
+}
+
 
 
 .--layout-informational *{
