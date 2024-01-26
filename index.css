@@ -187,6 +187,7 @@ header .logoWrapper img{
 
     margin-top: var(--headerHeight);
     padding-top: calc(var(--lineSpacing) * 2);
+    background-color: var(--color-background);
 }
 
 .hero .container > *:not(:last-child){
