@@ -132,6 +132,8 @@ header .logoWrapper img{
     flex: 1;
     position: relative;
     width: 100%;
+
+    background-color: rgb(59, 59, 59);
 }
 .subHero img{
     position: absolute;
@@ -140,7 +142,9 @@ header .logoWrapper img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.5;
 }
+
 @media screen and (max-width:530px){
     .subHero{
         flex-direction: column;
@@ -547,7 +551,7 @@ header .logoWrapper img{
     padding-right: calc((20 /16 * 1rem) + ((490 - 20) * ((100vw - 320px) / (1920 - 320))));
     padding-left: calc((20 /16 * 1rem) + ((490 - 20) * ((100vw - 320px) / (1920 - 320))));
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/thing.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/modern_house.jpg");
     background-position: center;
     background-size: cover;
 }
