@@ -1,77 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ottawa Custom Home Building | FRC Constrcution Home Improvement</title>
+---
+    title: Ottawa Custom Home Building | FRC Constrcution Home Improvement
+---
+{% extends "boilerplate/base.njk" %}
 
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/index.css">
-</head>
-<body>
-    <header>
-        <a href="/" class="logoWrapper"><img src="/assets/FRC_Logo_Minimal.svg" alt=""></a>
-        <input  type="checkbox" id="nav-toggle" name="nav-toggle" class="nav-toggle">
-        <nav>
-            <ul>
-                <li><a href="/" class="--btn-nav --typo-pSmall">Home</a></li>
-                <li><a href="/about-us" class="--btn-nav --typo-pSmall">About Us</a></li>
-                <li><a href="/general-contracting-services" class="--btn-nav --typo-pSmall --flare-text-1">Our Services</a></li>
-                <li><a href="/contact" class="--btn-nav --typo-pSmall">Contact Us</a></li>
-                <li><a href="/contact#quote" class="--btn-CTA2 --typo-pSmall">Free Quote</a></li>
-            </ul>
-        </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-    </header>
+{% block content %}
+<section class="subsubHero">
+    <div class="container --flare-background-2"><h1>Ottawa Custom<br>Building Home</h1></div>
+</section>
 
-    <section class="subsubHero">
-        <div class="container --flare-background-2"><h1>Ottawa Custom<br>Building Home</h1></div>
-    </section>
+<section class="--layout-centerP --typo-pBig">
+    <p>FRC Construction is dedicated to building custom homes in Ottawa and surrounding areas. Our focus is on creating homes that are tailored to your individual lifestyle and preferences. We go beyond standard construction to ensure that each home we build is a unique reflection of its owner.</p>
+</section>
 
-    <section class="--layout-centerP --typo-pBig">
-        <p>FRC Construction is dedicated to building custom homes in Ottawa and surrounding areas. Our focus is on creating homes that are tailored to your individual lifestyle and preferences. We go beyond standard construction to ensure that each home we build is a unique reflection of its owner.</p>
-    </section>
-
-    <section class="--layout-sideInformational --flare-background-8">
-        <div class="container --layout-informational">
-            <h2 class="--typo-formH2Small">Design and Build Process</h2>
-            <p>Our custom home building process is straightforward and client-focused. We begin with a detailed consultation to understand your specific needs and vision. Throughout the planning and design phase, we involve you in every decision to make sure the final home meets your expectations. Our clients' experiences speak volumes about our ability to transform visions into reality.</p>
-        
-            <h2 class="--typo-formH2Small">Our In-House Expertise</h2>
-            <p>Our partners and team's diverse expertise is key to our success in custom home building. We have specialists in various fields including:</p>
-            <ul>
-                <li>Septic and Water Well Services</li>
-                <li>Electrical and Hydro Systems</li>
-                <li>HVAC Solutions</li>
-                <li>Fireplace Installations</li>
-                <li>Garage and Laneway Construction</li>
-                <li>Siding and Masonry</li>
-                <li>Window & Door Installations</li>
-                <li>Interior Design and Craftsmanship</li>
-            </ul>
-            <p>Each one brings a wealth of experience to ensure every aspect of your home is executed with professional skill and attention to detail.</p>
-        
-            <h2 class="--typo-formH2Small">Project Management</h2>
-            <p>Efficient project management is crucial in custom home building. At FRC Construction, we handle all stages from design to completion, ensuring a smooth process. Our project management approach is designed for clarity and ease, minimizing any stress for you.</p>
-        
-            <h2 class="--typo-formH2Small">The FRC Construction Commitment</h2>
-            <p>Choosing FRC Construction for your custom home project means choosing reliability and peace of mind. We manage every aspect of your project, ensuring a consistent quality and a home that truly aligns with your vision. Our aim is to make building your custom home a stress-free and enjoyable experience, from start to finish.</p>
-        </div>
-        <div class="imgWrapper">
-            <img src="/assets/custom_home_1.jpeg" alt="custom home">
-            <img src="/assets/custom_home_2.jpg" alt="custom home">
-        </div>
-    </section>
+<section class="--layout-sideInformational --flare-background-8">
+    <div class="container --layout-informational">
+        <h2 class="--typo-formH2Small">Design and Build Process</h2>
+        <p>Our custom home building process is straightforward and client-focused. We begin with a detailed consultation to understand your specific needs and vision. Throughout the planning and design phase, we involve you in every decision to make sure the final home meets your expectations. Our clients' experiences speak volumes about our ability to transform visions into reality.</p>
+    
+        <h2 class="--typo-formH2Small">Our In-House Expertise</h2>
+        <p>Our partners and team's diverse expertise is key to our success in custom home building. We have specialists in various fields including:</p>
+        <ul>
+            <li>Septic and Water Well Services</li>
+            <li>Electrical and Hydro Systems</li>
+            <li>HVAC Solutions</li>
+            <li>Fireplace Installations</li>
+            <li>Garage and Laneway Construction</li>
+            <li>Siding and Masonry</li>
+            <li>Window & Door Installations</li>
+            <li>Interior Design and Craftsmanship</li>
+        </ul>
+        <p>Each one brings a wealth of experience to ensure every aspect of your home is executed with professional skill and attention to detail.</p>
+    
+        <h2 class="--typo-formH2Small">Project Management</h2>
+        <p>Efficient project management is crucial in custom home building. At FRC Construction, we handle all stages from design to completion, ensuring a smooth process. Our project management approach is designed for clarity and ease, minimizing any stress for you.</p>
+    
+        <h2 class="--typo-formH2Small">The FRC Construction Commitment</h2>
+        <p>Choosing FRC Construction for your custom home project means choosing reliability and peace of mind. We manage every aspect of your project, ensuring a consistent quality and a home that truly aligns with your vision. Our aim is to make building your custom home a stress-free and enjoyable experience, from start to finish.</p>
+    </div>
+    <div class="imgWrapper">
+        <img src="/assets/custom_home_1.jpeg" alt="custom home">
+        <img src="/assets/custom_home_2.jpg" alt="custom home">
+    </div>
+</section>
 
 
-    <section class="--layout-CTA">
-        <h2 class="--typo-h2CTA">How Can We Help You?</h2>
-        <p class="--typo-pHero">Explore the potential for your project or swiftly address your repair needs with FRC Construction. Contact us now to take the first step towards realizing your construction goals!</p>
-        <a href="/contact#quote" class="--btn-CTA2 --typo-btn1">Get In Contact</a>
-    </section>
-</body>
-</html>
+<section class="--layout-CTA">
+    <h2 class="--typo-h2CTA">How Can We Help You?</h2>
+    <p class="--typo-pHero">Explore the potential for your project or swiftly address your repair needs with FRC Construction. Contact us now to take the first step towards realizing your construction goals!</p>
+    <a href="/contact#quote" class="--btn-CTA2 --typo-btn1">Get In Contact</a>
+</section>
+
+{% endblock %}
