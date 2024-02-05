@@ -1,0 +1,26 @@
+---
+title: FRC Ottawa Construction And Renovations | Some of Our Work
+
+---
+
+{% extends "boilerplate/base.njk" %}
+
+{% block content %}
+    <section class="subHero">
+        <div class="container --flare-background-2"><h1>Our<br>Work</div>
+        <div class="imgWrapper">
+            <img src="/assets/thing.jpg" alt="">
+        </div>
+    </section>
+    <main>
+    {% for item in portfolioItems %}
+        <div class="gallery-item">
+        <h2>{{ item.title }}</h2>
+        {% for image in item.images %}
+            <img src="{{ image.image }}" alt="{{ image.caption }}">
+            <p>{{ image.caption }}</p>
+        {% endfor %}
+        </div>
+    {% endfor %}
+    </main>
+{% endblock %}

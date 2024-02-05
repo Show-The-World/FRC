@@ -2,15 +2,23 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "SSG/src/assets/blog"
-public_folder: "/assets/blog/"
+media_folder: "SSG/src/assets/uploads/"
+public_folder: "/assets/uploads/"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "SSG/src/blog"
-    create: true
-    slug: "{{slug}}"
-    fields:
+
+
+# Gallery Collections
+  - name: "gallery" # This is used in URLs, e.g., /admin/collections/portfolio
+    label: "Gallery" # This is the name shown in the CMS UI
+    folder: "SSG/src/gallery" # The directory where gallery files will be saved
+    create: true # Allow users to create new items in this collection
+    slug: "{{slug}}" # Filename template for new items
+    fields: # Define the fields for items in this collection
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Caption", name: "caption", widget: "string", required: false}
