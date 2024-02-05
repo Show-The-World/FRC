@@ -7,18 +7,19 @@ public_folder: "/assets/uploads/"
 
 collections:
 
-
-# Gallery Collections
-  - name: "gallery" # This is used in URLs, e.g., /admin/collections/portfolio
-    label: "Gallery" # This is the name shown in the CMS UI
-    folder: "SSG/src/gallery" # The directory where gallery files will be saved
-    create: true # Allow users to create new items in this collection
-    slug: "{{slug}}" # Filename template for new items
-    fields: # Define the fields for items in this collection
-      - {label: "Title", name: "title", widget: "string"}
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        fields:
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Caption", name: "caption", widget: "string", required: false}
+  - name: "gallery" # This is the name used in the URL in the CMS (/admin/collections/gallery)
+    label: "Gallery" # This is the name displayed in the CMS UI
+    extension: "json" # Use JSON to manage non-Markdown data, suitable for a list of images
+    editor:
+      preview: false # Disable the preview if it's not necessary
+    files:
+      - name: "gallery" # A single file named gallery
+        label: "Gallery" # Label for the gallery
+        file: "_data/gallery.json" # The file to store our gallery data, Eleventy can easily access data files
+        fields: # Define the fields for this gallery
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "text", required: false}
