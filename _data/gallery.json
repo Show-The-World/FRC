@@ -1,0 +1,11 @@
+{
+  "images": [
+    {
+      "image": "/assets/uploads/img_0341.jpg",
+      "caption": "caption value"
+    },
+    {
+      "image": "/assets/uploads/img_4905.jpg"
+    }
+  ]
+}
