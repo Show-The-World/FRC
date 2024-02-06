@@ -792,7 +792,13 @@ header .logoWrapper img{
 }
 .--card-2 .separator::before, .--card-2 .separator::after{
     background-color: var(--color-green1);
-    position: absolute;--layout-2BlockSplitg));
+    position: absolute;
+    height: 2px;
+    content: '';
+    width: 40%;
+}
+.--card-2 .separator::before{
+    left: calc(-1 * var(--padding));
 }
 .--card-2 .separator::after{
     right: calc(-1 * var(--padding));
@@ -802,6 +808,7 @@ header .logoWrapper img{
 
     aspect-ratio: 1; /* REMOVE*/
 }
+
 
 
 .--card-3{
