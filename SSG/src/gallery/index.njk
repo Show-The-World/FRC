@@ -2,7 +2,12 @@
 title: FRC Ottawa Construction And Renovations | Some of Our Work
 ---
 
-{% extends "boilerplate/base.njk" %}
+{% extends "boilerplate/boilerplate.njk" %}
+
+{% block links %}
+    <link rel="stylesheet" href="/styles/gallery.css">
+    {{ super() }}
+{% endblock %}
 
 {% block content %}
     <section class="subHero">
@@ -13,14 +18,8 @@ title: FRC Ottawa Construction And Renovations | Some of Our Work
     </section>
     <main>
 
-    {% for item in collections.gallery.gallery %}
-        <div class="gallery-item">
-        <h2>{{ item.title }}</h2>
-        {% for image in item.images %}
-            <img src="{{ image.image }}" alt="{{ image.caption }}">
-            <p>{{ image.caption }}</p>
-        {% endfor %}
-        </div>
+    {% for item in gallery.images %}
+        <div class="imgWrapper galleryItem"><img src="{{item.image}}" alt="{{item.caption}}" class=""></div>
     {% endfor %}
     </main>
 {% endblock %}

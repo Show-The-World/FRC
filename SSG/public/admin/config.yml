@@ -15,7 +15,7 @@ collections:
     files:
       - name: "gallery" # A single file named gallery
         label: "Gallery" # Label for the gallery
-        file: "_data/gallery.json" # The file to store our gallery data, Eleventy can easily access data files
+        file: "SSG/src/_data/gallery.json" # The file to store our gallery data, Eleventy can easily access data files
         fields: # Define the fields for this gallery
           - label: "Images"
             name: "images"
