@@ -728,15 +728,31 @@ header .logoWrapper img{
 
 .--btn-card1{
     width:auto ;
+    position: relative;
+}
+
+.--btn-card1::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-orange1);
+    height: 7px;
+    z-index: 100;
+    transition-duration: 0.2s;
+}
+.--btn-card1:hover::after{
+    height: 100%;
 }
 .--card-1{
     display: flex;
     background-color: var(--color-light1);
     padding: calc(var(--lineSpacing) * 0.6);
 
-    border-bottom: solid 7px var(--color-orange1);
     position: relative;
 
+    display;
     height: 100%;
 
 }
@@ -806,7 +822,6 @@ header .logoWrapper img{
 .--card-2 .separator img{
     width: 15%;
 
-    aspect-ratio: 1; /* REMOVE*/
 }
 
 
@@ -919,6 +934,9 @@ header .logoWrapper img{
 }
 
 .footer-logo{
+    width: 100%;
+}
+footer .imgWrapper{
     width: 100%;
 }
 

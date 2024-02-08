@@ -305,10 +305,18 @@ p, .p, p *, .p *, li{
 
 
 /* BUTTON */
+a, button{
+    transition-duration: 0.15s;
+}
+
 
 .--btn-CTA1{
     padding: 0.50em;
     border: 0.075em solid var(--color-dark1);
+}
+.--btn-CTA1:hover{
+    color: var(--color-light1);
+    background-color: var(--color-dark1);
 }
 
 
@@ -319,7 +327,14 @@ p, .p, p *, .p *, li{
     width: 100%;
     text-align: left;
 }
+.--btn-submit:hover{
+    background-color: var(--color-green1);
+    color: var(--color-dark4);
+}
 
+a.--typo-cell:hover *, a.--typo-cell2:hover *{
+    color: var(--color-orange1);
+}
 
 .--btn-learnMore1{
     position: relative;
@@ -328,6 +343,14 @@ p, .p, p *, .p *, li{
     width: max-content;
 
     padding-right: var(--sideOffset);
+}
+.--btn-learnMore1:hover{
+    scale: 1.05;
+}
+
+.--btn-logo:hover{
+    scale: 1.1;
+    transition: all 0.3s cubic-bezier(0.21, 0.58, 0, 2.76);
 }
 
 .--btn-learnMore1 .arrowLine{
@@ -353,4 +376,18 @@ p, .p, p *, .p *, li{
 .--btn-CTA2{
     background-color: var(--color-orange1);
     padding: 0.6em 1.2em;
+}
+
+.--btn-CTA2:hover{
+    background-color: var(--color-orange2);
+}
+
+
+.--btn-nav:hover{
+    scale: 1.1;
+}
+
+
+.--btn-card1:hover{
+    
 }
