@@ -42,7 +42,7 @@ header .logoWrapper img{
     display: none;
 }
 
-@media screen and (max-width:920px){
+@media screen and (max-width:1125px){
     header .logoWrapper{
         display: none;
     }
@@ -52,7 +52,7 @@ header .logoWrapper img{
     }
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:935px){
     header .logoWrapper{
         display: block;
     }
