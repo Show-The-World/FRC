@@ -73,6 +73,7 @@ section, main{
 
 button, a{
     display: block;
+    width: fit-content;
 }
 
 .imgWrapper{
