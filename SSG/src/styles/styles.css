@@ -73,7 +73,6 @@ section, main{
 
 button, a{
     display: block;
-    width: max-content;
 }
 
 .imgWrapper{
