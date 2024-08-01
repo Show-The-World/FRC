@@ -1,0 +1,388 @@
+/* STYLE RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: black;
+    font-size: 1rem;
+    font-style: normal;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 500;
+    /* box-sizing: border-box; */
+    box-sizing: border-box;
+}
+
+
+/* COLOR VAR */
+
+:root{
+    --color-background: #EAEAEA; 
+    --color-header: #EFEFEF;
+    --color-light1: white;
+    --color-light2: #E8E8E8;
+    --color-dark1: #131313;
+    --color-dark4: #1e1e1e;
+    --color-dark2: #313131;
+    --color-dark3: #535353;
+    --color-green1: #77D875;
+    --color-orange1:#ff9650;
+    --color-orange2:#FBB06C;
+}
+
+
+.colorInverse{
+    --color-background: #212121; 
+    --color-header: #1c1818;
+    --color-light1: #313131;
+    --color-light2: #535353;
+
+
+    --color-dark1: #EAEAEA;
+    --color-dark4: #EFEFEF;
+    --color-dark2: white;
+    --color-dark3: #E8E8E8;
+
+    background-color: var(--color-background);
+}
+
+/* SIZE VARS */
+
+:root{
+    --headerHeight: calc((50 /16 * 1rem) + ((90 - 50) * ((100vw - 320px) / (1920 - 320))));
+    --gutterSpacing: calc((20 /16 * 1rem) + ((245 - 20) * ((100vw - 320px) / (1920 - 320))));
+    --sectionSpacing: calc((190 /16 * 1rem) + ((300 - 190) * ((100vw - 320px) / (1920 - 320))));
+    --lineSpacing: calc((25 /16 * 1rem) + ((30 - 25) * ((100vw - 320px) / (1920 - 320))));
+}
+
+
+
+
+/* GENERAL */
+
+body{
+    background-color: var(--color-background);
+}
+
+section, main{
+    padding: calc(var(--sectionSpacing) / 2) var(--gutterSpacing);
+}
+
+button, a{
+    display: block;
+    width: fit-content;
+}
+
+.imgWrapper{
+    z-index: 10;
+}
+img{
+    z-index: 10;
+    display: block;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+
+/* TYPOGRAPHY */
+
+*{
+    font-family: sans-serif;
+}
+
+h1, h1 *{
+    color: var(--color-dark1);
+    font-size: calc((36 /16 * 1rem) + ((56 - 36) * ((100vw - 320px) / (1920 - 320))));
+}
+
+h2, h2 *{
+    color: var(--color-dark1);
+    font-weight: 900;
+    font-size: calc((28 /16 * 1rem) + ((56 - 28) * ((100vw - 320px) / (1920 - 320))));
+}
+
+h3, h3 *{
+    color: var(--color-dark1);
+    font-size: calc((22 /16 * 1rem) + ((24 - 22) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 900;
+}
+
+p, .p, p *, .p *, li{
+    color: var(--color-dark1);
+    font-size: calc((16 /16 * 1rem) + ((24 - 16) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--typo-pHero, .--typo-pHero *{
+    color: var(--color-dark1);
+    font-size: calc((22 /16 * 1rem) + ((32 - 22) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--typo-pBig, .--typo-pBig *{
+    color: var(--color-dark1);
+    font-size: calc((20 /16 * 1rem) + ((28 - 20) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 100;
+}
+
+.--typo-btn1, .--typo-btn1 *{
+    color: var(--color-dark1);
+    font-size: calc((18 /16 * 1rem) + ((28 - 18) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--typo-btn2, .--typo-btn2 *{
+    color: var(--color-dark1);
+    font-size: calc((16 /16 * 1rem) + ((26 - 16) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 600;
+}
+
+.--typo-h2CTA, .--typo-h2CTA *{
+    color: var(--color-dark1);
+    font-size: calc((32 /16 * 1rem) + ((64 - 32) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--typo-pSmall{
+    color: var(--color-dark1);
+    font-size: calc((18 /16 * 1rem) + ((21 - 18) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--typo-cell{
+    color: var(--color-dark1);
+    font-weight: 600;
+    font-size: calc((20 /16 * 1rem) + ((28 - 20) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--typo-cell2, .--typo-cell2 *{
+    color: var(--color-dark1);
+    font-weight: 100;
+    font-size: calc((18 /16 * 1rem) + ((22 - 18) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--typo-formH2Big{
+    color: var(--color-dark1);
+    font-size: calc((30 /16 * 1rem) + ((48 - 30) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 100;
+}
+
+.--typo-formH2Small{
+    color: var(--color-dark1);
+    font-size: calc((26 /16 * 1rem) + ((34 - 26) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 600;
+}
+
+.--typo-inputLabel{
+    color: var(--color-dark1);
+    font-size: calc((16 /16 * 1rem) + ((18 - 16) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 600;
+}
+
+.--typo-inputText{
+    font-size: calc((20 /16 * 1rem) + ((22 - 20) * ((100vw - 320px) / (1920 - 320))));
+}
+
+.--card-3 > *:first-child{
+    color: var(--color-green1);
+    font-size: calc((24 /16 * 1rem) + ((62 - 24) * ((100vw - 320px) / (1920 - 320))));
+    font-weight: 600;
+}
+.--card-3 > *:last-child{
+    color: var(--color-background);
+    font-weight: 600;
+    font-size: calc((10 /16 * 1rem) + ((20 - 10) * ((100vw - 320px) / (1920 - 320))));
+}
+
+
+/* FLARE */
+
+.--flare-text-1{
+    font-weight: 900;
+}
+
+
+
+.--flare-background-1{position: relative;}
+.--flare-background-1::before{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: calc(var(--sectionSpacing) /4);
+    bottom:  calc(var(--sectionSpacing) /4);
+    width: 30%;
+    content: '';
+    background-color: var(--color-dark2);
+
+    /* opacity: 1; */
+    /* background-image:  radial-gradient(#7d7e86 1.65px, transparent 1.65px), radial-gradient(#7d7e86 1.65px, var(--color-dark3) 1.65px); */
+    /* background-size: 66px 66px; */
+    /* background-position: 0 0,33px 33px; */
+}
+@media screen and (max-width:600px){
+    .--flare-background-1::before{
+        bottom: unset;
+        right: 0;
+        width: auto;
+        height: 30%;
+    }
+}
+
+
+
+.--flare-background-2{
+    background-color: var(--color-dark2);
+    --color-dark1: var(--color-background);
+}
+
+
+/* .--flare-background-3{position: relative;}
+.--flare-background-3::before{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    content: '';
+    background-color: var(--color-orange1);
+
+    opacity: 1;
+    background-image: radial-gradient(rgb(27, 21, 21) 1.75px, var(--color-green1) 1.75px);
+    background-size: 35px 35px;
+} */
+
+@media screen and (max-width:600px){
+    .--flare-background-3::before{
+        right: 0;
+        left: 0;
+        top: auto;
+        width: auto;
+        bottom: 0;
+        height: 30%;
+    }
+}
+
+
+.--flare-background-4{
+    background-color: var(--color-background);
+    background-size: 15px 15px;
+    background-image: repeating-linear-gradient(45deg, #e7e1e1 0, #e7e1e1 1.5px, var(--color-background) 0, var(--color-background) 50%);
+
+}
+
+.--flare-background-6{
+    background-color: var(--color-dark4);
+    --color-dark1: var(--color-background);
+}
+
+
+.--flare-background-7{
+    position: relative;
+}
+.--flare-background-7::before{
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 40%;
+
+    background-color: var(--color-dark3);
+}
+@media screen and (max-width:950px){
+    .--flare-background-7::before{
+        display: none;
+    }
+}
+
+
+.--flare-background-8{
+    background-color: rgb(244, 244, 244);
+}
+
+
+
+/* BUTTON */
+a, button{
+    transition-duration: 0.15s;
+}
+
+
+.--btn-CTA1{
+    padding: 0.50em;
+    border: 0.075em solid var(--color-dark1);
+}
+.--btn-CTA1:hover{
+    color: var(--color-light1);
+    background-color: var(--color-dark1);
+}
+
+
+.--btn-submit{
+    padding: 0.50em 0.75em;
+    border: 0.075em solid var(--color-green1);
+    color: var(--color-green1);
+    width: 100%;
+    text-align: left;
+}
+.--btn-submit:hover{
+    background-color: var(--color-green1);
+    color: var(--color-dark4);
+}
+
+a.--typo-cell:hover *, a.--typo-cell2:hover *{
+    color: var(--color-orange1);
+}
+
+.--btn-learnMore1{
+    position: relative;
+    --lineThickness: 0.2em;
+    --sideOffset: 2em;
+    width: max-content;
+
+    padding-right: var(--sideOffset);
+}
+.--btn-learnMore1:hover{
+    scale: 1.05;
+}
+
+.--btn-logo:hover{
+    scale: 1.1;
+    transition: all 0.3s cubic-bezier(0.21, 0.58, 0, 2.76);
+}
+
+.--btn-learnMore1 .arrowLine{
+    background-color: var(--color-green1);
+    height: var(--lineThickness);
+    width: calc(100% + var(--sideOffset));
+    margin-top: 0.2em;
+    clip-path: polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);
+}
+.--btn-learnMore1 .arrowHead{
+    width: calc(var(--lineThickness) * 1.9);
+    background-color: var(--color-green1);
+    position: absolute;
+    right: 0;
+    top: 0.8em;
+    bottom: 0;
+    transform: skewX(60deg);
+    transform-origin: bottom;
+}
+
+
+
+.--btn-CTA2{
+    background-color: var(--color-orange1);
+    padding: 0.6em 1.2em;
+}
+
+.--btn-CTA2:hover{
+    background-color: var(--color-orange2);
+}
+
+
+.--btn-nav:hover{
+    scale: 1.1;
+}
